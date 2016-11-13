@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Troubleshooting</title>
+  </head>
+  <body>
+    <h2>Troubleshooting</h2>
+    In case you face a problem related to importing the VM, please check the following.<br><br><span style="font-weight: bold; text-decoration: underline;">Windows OS</span><br><br>The following steps are for Windows Machines:<br>
+    <ol>
+      <li>Reboot your machine</li>
+      <li>During
+        the reboot process, and before the Windows Logo appears, keep pressing
+        &nbsp;(&nbsp;F2 or F1 or F10 or F8 or Delete or ESC, sometimes it is
+        different key. Pay close attention to the initial screen when you press
+        the power button. It will say which key to press to get to the <span style="color: red;">Setup</span> menu.).&nbsp; But act quickly. If the Windows starts then go back to step 1.
+      </li>
+      <li>This will open the BIOS menu</li>
+      <li>The menu will be very different depending on <span style="color: red;">BIOS</span> version and processor type. But navigate till "Security" menu. </li>
+      <li>Ensure
+        that VT-x (for Intel Processors) or AMD-v (for AMD processors) are
+        enabled. &nbsp;You will have something similar to Figure 1 below.
+      </li>
+      <li>&nbsp;Save and exit the BIOS</li>
+      <li>The machine will reboot.</li>
+      <li>Start
+        virtualBox --&gt; select the VM (cso) from the left handside. --&gt; go
+        to settings of the VM --&gt; System --&gt; Acceleration --&gt; ensure
+        that "Enable VT-x/AMD-v" is activated
+      </li>
+    </ol>
+    <span style="color: rgb(17, 17, 17); font-family: Ubuntu,Arial,'libra sans',sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);"><br></span><span style="font-weight: bold;">If you are still facing a problem, please send it to the course mailing list and we will do our best to help.</span><br><br><img src="vm-troubleshoot.jpg"><br><span style="font-weight: bold;">Figure 1: &nbsp;An example BIOS security menu</span> &nbsp;(<a href="http://www.fixedbyvonnie.com/2014/11/virtualbox-showing-32-bit-guest-versions-64-bit-host-os/">source</a>)<br><br><span style="font-weight: bold; text-decoration: underline;">MAC OS</span><br><br>Type of error you may get: <span style="font-family: arial,sans-serif; font-size: 12.8px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255); font-weight: bold; color: red;">"verr_cfgm_node_exist"</span>
+    <ol style="color: rgb(0, 0, 0); font-family: Verdana,'Bitstream Vera Sans',sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; background-color: rgb(255, 255, 255);">
+      <li>Open<span class="Apple-converted-space">&nbsp;</span><a class="wiki" href="https://www.virtualbox.org/wiki/VirtualBox" style="text-decoration: none; color: rgb(0, 0, 192); border-bottom-style: none;">VirtualBox</a><span class="Apple-converted-space">&nbsp;</span>GUI</li>
+      <li>go to the the new VM (imported appliance)</li>
+      <li>select USB tab</li>
+      <li>disable USB</li>
+      <li>enable USB</li>
+      <li>start the new VM (imported appliance)</li>
+    </ol>
+    If
+    this does not work, &nbsp;do the above steps except at steps 4 and 5,
+    instead of disabling USB change it to another type (e.g. change it to
+    USB 3).
+  </body>
+</html>
+
